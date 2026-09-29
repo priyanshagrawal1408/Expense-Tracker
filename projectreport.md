@@ -86,4 +86,5 @@ The Expense Tracker is a practical and beginner-friendly project that demonstrat
 ## 12. Project Status
 Status: Completed as a functional personal expense tracking tool.
 
-Developer: VitYarthiProject
+Developer: Priyansh Agrawal 
+           26BCE11720
