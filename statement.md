@@ -2,39 +2,41 @@
 
 ## Problem Statement
 
-Many students and young people spend money every day on food, travel, shopping and bills, but they don't write it down anywhere. At the end of the month they have no idea where their money went. Most expense apps are either too heavy, need an account, or are full of features that a beginner doesn't need.
+A lot of students spend money every day on food, travel, shopping and bills, but never write it down. By the end of the month, they don't know where all the money went. Most expense apps ask you to make an account or have too many options, which is annoying if you just want to note down what you spent.
 
-This project is a simple command-line expense tracker that lets a user quickly note down what they spent, keep it saved on their own computer, and check how much they have spent overall and in each category.
+So I made a simple expense tracker that runs in the terminal. You type in what you spent, it saves it on your computer, and you can look at your spending whenever you want.
 
 ## Scope of the Project
 
-**What the project does:**
+What it can do:
 
-- Lets the user add an expense with a name, a category and an amount
-- Saves each expense with today's date automatically
-- Stores all data in a local text file (`exp.txt`) so it is not lost when the program is closed
-- Shows all saved expenses in a list
-- Calculates the total amount spent and the total for each category
-- Checks the input, so a wrong amount (for example, letters instead of numbers) is not saved
+- Add an expense with a date, name, category and amount
+- Show all saved expenses and the total
+- Edit or delete an expense if you made a mistake
+- Show a summary with the total, the average, the biggest expense and how much was spent in each category
+- Save everything in a text file (`exp.txt`) after every change
+- Check what the user types, so wrong dates, wrong amounts or empty names are not saved
+- Skip broken lines in the data file instead of crashing
 
-**What the project does not do (out of scope):**
+What it does not do:
 
-- No graphical interface or website, it runs only in the terminal
-- No login or multiple users, the data file belongs to one person
-- No editing or deleting of expenses from inside the program
-- No budgets, charts, or exporting to Excel
-- No online storage or syncing between devices
+- No app screen or website, it only works in the terminal
+- No login, it is for one person only
+- No budgets, charts or Excel export
+- No online saving or syncing between devices
 
 ## Target Users
 
-- Students who want to track their pocket money or monthly spending
-- Beginners who want a simple tool without any setup or account
-- Anyone who is comfortable running a small Python program from the terminal
+- Students who want to keep track of their pocket money or monthly spending
+- Beginners who want something simple with no account and no setup
+- Anyone who is fine with running a small Python program in the terminal
 
 ## High-Level Features
 
-1. **Add Expense:** takes the name, category and amount from the user and saves it with today's date.
-2. **View Expenses:** prints every saved expense (date, name, category, amount).
-3. **Spending Summary:** shows the total spent and the total for each category.
-4. **Data Saving:** every new expense is written to `exp.txt` straight away, and old data is loaded when the program starts.
-5. **Input Validation:** wrong amounts are rejected, and commas in text are replaced so the data file does not break.
+1. **Add expense:** enter the date (leave it blank for today), name, category and amount.
+2. **View expenses:** see all your expenses in a numbered list with the total at the bottom.
+3. **Edit expense:** change the date, name, category or amount of any entry.
+4. **Delete expense:** remove an entry, and it asks "are you sure?" first.
+5. **Summary:** shows total, average, biggest expense and spending per category with percentages.
+6. **Auto save:** every change is saved to `exp.txt` right away and loaded again when you start the program.
+7. **Input checking:** the date must look like `YYYY-MM-DD`, the amount must be a positive number, and names can't be empty. commas in text are replaced so the data file does not break.
